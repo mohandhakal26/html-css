@@ -1,0 +1,457 @@
+* {
+	box-sizing: border-box;
+}
+*:after,
+*:before {
+	box-sizing: content-box;
+}
+p {
+	margin: 0 0 10px;
+}
+
+h1 {
+	margin: 0 0 20px;
+}
+.wrapper {
+	overflow: hidden;	
+	position: relative;
+	width: 960px;
+	
+}
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+/* Header top link styles----*/
+/*width is auto set here. Resetting width to 1000px will leave entire block aligned to the left. Any tricks to center-align this block with customized-width?*/
+.header-top {
+	background-color: #333;
+	overflow: hidden;
+	/*height: 60px;*/
+	padding: 15px 0;
+	/*uncomment above line to see the difference. Not sure what I'm missing here.*/
+}
+
+/*Always reset margin and padding on UL. because ul elements always take auto margin*/
+ul.header-top-link {
+	float: left;
+	list-style: none;
+	margin-top: 15px;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*It doesn't seem to require margin-top value unlike in social media btn. What is the best practice to align header-top links with social-media btn*/
+.header-top-link li {
+	display: inline-block;
+	font-family: georgia;
+	border-right: 2px solid #fff;
+	padding: 0 10px;
+	margin-top: 8px; 
+}
+.header-top-link li:last-child {
+	border-right: none;
+}
+
+.header-top-link li a {
+	text-decoration: none;
+	color: #fff;
+	
+}
+
+.header-top-link li:hover {
+	opacity: 0.4;
+}
+
+
+/*Header-Top Social Media button....*/
+
+.header-top-media-btn {
+	float: right;
+}
+
+.header-top-media-btn a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 0 10px;
+	/*margin-top: 15px; /* the buttons stick out to the top without specifying margin-top. Comment out this line to see the results*/
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+	text-align: center;
+	margin-left: 10px;
+}
+.fa-linkedin, .fa-twitter, .fa-pinterest, .fa-rss {
+	background: #666;
+	color: white;
+}
+
+.fa-google {
+	background: red;
+
+}
+.header-top-media-btn a:hover {
+	opacity: 0.4;
+}
+
+
+/*header-menu styles*/
+.menu-items {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-items> li {
+	float: left;
+	border-bottom: 5px solid #ccc;
+}
+
+.menu-items> .menu-item-active{
+	border-bottom: none;
+}
+
+
+.menu-items > li > a {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 20px 11px;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+}
+
+.menu-items > li > a:not(.active):hover {
+	background-color: #ccc;
+	
+}
+
+
+/*Dropdown-menu styles*/
+li.dropdown {
+	position: relative;
+}
+
+
+li.dropdown a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 20px;
+	text-transform: uppercase;
+}
+.dropdown a:hover {
+	background-color: #ccc;
+	/*opacity: 0.5;*/
+	/*color: #fff;*/
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block; /*this doesn't change anything on output...not sure why?*/
+}
+
+.dropdown-menu {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 160px;
+	background-color: #fff;
+	border: 2px solid #000;
+	border-style: none;
+	display: none;
+
+}
+
+.dropdown-menu ul{
+	margin: 0; /*resetting margin and padding - forgot the terminology*/
+	padding: 0;
+	list-style: none;
+
+}
+
+/*clearfix on parent element before float*/
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.active {
+	/*opacity: 0.5;*/
+	border-bottom: 5px solid rgb(0, 153, 255);
+	
+}
+
+/*.menu-items > li > a.active:hover {
+	background-color: transparent;
+}*/
+
+.header-logo{
+	margin-left: 15px;
+	float: left;
+}
+
+.large-text{
+	
+	font-size: 28px;
+	/*margin-bottom: -5px;*/
+}
+.small-text{
+	letter-spacing: -.40px;
+	font-size: 12px;
+	color: rgb(153,153,153);
+}
+
+.header-bottom {
+	margin-top: 45px;
+	overflow: hidden;
+	font-family: georgia;
+}
+
+.large-text-top {
+	margin-bottom: 10px;
+}
+
+.search-bar {
+	float:right;
+
+}
+.header-bottom> .search-bar {
+	margin-top: 22px
+}
+
+.search-button-area {
+	background-color: rgb(0,153,255);
+	cursor: pointer;
+	color: white;
+	border-style: none;
+	border-radius: 5px;
+	padding:4px 5px;
+}
+
+.search-textarea {
+	background-color: rgb(241,241,241);
+}
+
+.search-button-area:hover {
+	opacity: 0.9;
+	
+}
+
+.sectin-one {
+	background-color:rgb(241,241,241);
+
+}
+.section-one-content {
+	width: calc(100% - 550px);
+	float:left;
+	padding-right: 20px;
+	margin-top:156px;
+	/*padding-right: 30px;*/
+}
+.section-one-banner {
+	/*width: 50%;*/
+	float: right;
+
+}
+
+/*.section-one-banner-size {
+	float:right;
+}*/
+
+.section-one-btn-icon {
+	background-color: rgb(0,153,255);
+	border-style: none;
+	border-radius: 4px;
+	padding:5px 5px;
+
+}
+
+.section-one-btn {
+	text-decoration: none;
+	cursor: pointer; 
+	color: white;	
+}
+
+.section-one-btn-icon:hover {
+	opacity: 0.9;
+}
+
+.row {
+	margin: 0 -10px;
+}
+
+.two-columns .column {
+	width: 50%;
+}
+
+.three-columns .column {
+	width: 33.333%;
+}
+
+.four-columns .column {
+	width: 25%;
+}
+
+.column {
+	float: left;
+	padding: 0 10px;
+}
+
+.thumbnail-caption {
+	color: #0099ff;
+}
+
+.row .two-columns {
+	margin-top: 38px;
+}
+.img-block {
+	margin-top: 38px;
+}
+
+p .thumbnail-description {
+	margin-bottom: 30px;
+}
+
+.row .two-columns .column p {
+	margin-bottom: 30px;
+}
+
+.row .two-columns .column h4 {
+	margin-top: 13px;
+}
+
+/*Can we resize h1/h2, for example 2em doesn't change the size. Am I missing something here*/
+.footer-heading {
+	float: left;
+	width: calc(100% - 278px);
+}
+
+.btn-wrap {
+	float: right;
+	width: 278px;
+}
+
+.btn {
+	color: #ffffff;
+	border-style: none;
+	padding: 5px 5px;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	height: 58px;
+	cursor: pointer;
+}
+.btn.btn-small {
+	height: 40px;
+}
+.btn:hover {
+	opacity: 0.8;
+}
+.btn.blue-btn {
+	background-color: #0099ff;
+}
+.btn.red-btn {
+	background-color: red;
+}
+.footer-top-block {
+	background-color: #cccccc;
+	margin-bottom: 40px;
+	padding: 32px;
+	border-left: 10px solid #0099ff;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/*footer styles started here
+*********************
+Next comment
+*/
+.footer {
+	/*border-top: 5px solid #000;*/
+}
+.footer-bottom {
+	background-color: #333333;
+	padding: 30px 0;
+}
+
+.footer-title {
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.read-more> a {
+	text-decoration: none;
+	float: right;
+	color: #0099ff;
+}
+
+.img-footer {
+	padding:5px 20px 20px 0;
+}
+
+.footer-links {
+	margin: 0;
+	padding:0;
+	list-style: none;
+	font-family: georgia;
+}
+
+.footer-links> li {
+	padding-bottom: 7px;
+	padding-top: 6px;
+	text-decoration: none;
+	color: #0099ff;
+	border-bottom: 1px solid #666;
+	
+}
+
+.footer-links> li:last-child {
+	border-bottom: none;
+}
+
+.footer-color {
+	color: #999;
+}
+.title-small {
+	margin-bottom: 0;
+}
+
+.blog-post-block {
+	padding-bottom: 15px;
+}
+.footer-form .btn {
+	font-size: 16px;
+	padding: 5px;
+}
+
+.contact-info {
+	padding: 7px 0 7px 0;
+	background-color: #555;
+	border-style: none;
+	padding-left: 5px;
+}
+
+.footer-form input {
+	margin-bottom: 10px;
+
+}
+
+.footer-form {
+	color: #fff;
+}
+
+
+
+
+
+
+
+
